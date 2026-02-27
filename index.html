@@ -593,39 +593,12 @@
       <div class="container panel fade-up">
         <h2>The Closer: Request Your 10-Minute Walkthrough</h2>
         <p class="sub">Tell us your current bottleneck and we will send an action-focused, revenue-first optimization path.</p>
-        <form id="walkthroughForm">
-          <div class="form-grid">
-            <label>
-              <span class="sr-only">Full name</span>
-              <input required name="name" autocomplete="name" placeholder="Full Name" />
-            </label>
-            <label>
-              <span class="sr-only">Work email</span>
-              <input required type="email" name="email" autocomplete="email" placeholder="Work Email" />
-            </label>
-          </div>
-          <div class="form-grid">
-            <label>
-              <span class="sr-only">Company</span>
-              <input required name="company" autocomplete="organization" placeholder="Company" />
-            </label>
-            <label>
-              <span class="sr-only">Priority</span>
-              <select name="priority" required>
-                <option value="">Biggest Priority</option>
-                <option>Improve lead generation</option>
-                <option>Accelerate page speed</option>
-                <option>Voice SEO visibility</option>
-                <option>Reduce infrastructure waste</option>
-              </select>
-            </label>
-          </div>
-          <label>
-            <span class="sr-only">Project context</span>
-            <textarea name="message" placeholder="What is currently blocking growth?" required></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">Request 10-Minute Walkthrough</button>
-          <p id="successMsg" class="success" role="status" aria-live="polite">Walkthrough request captured. Bookin-AI will follow up with next steps.</p>
+        <form action="https://formspree.io/f/mgolqlbz" method="POST">
+          <input type="text" name="name" placeholder="Business Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="What can Bookin-AI optimize for you?"></textarea>
+          <input type="hidden" name="_next" value="https://bookin-ai.com/thanks">
+          <button type="submit">Unlock My 10-Min Walkthrough</button>
         </form>
       </div>
     </section>
@@ -725,8 +698,6 @@
     const runtimeBar = document.getElementById("runtimeBar");
     const voiceBar = document.getElementById("voiceBar");
     const convBar = document.getElementById("convBar");
-    const walkthroughForm = document.getElementById("walkthroughForm");
-    const successMsg = document.getElementById("successMsg");
 
     function setAuditData(optimized) {
       if (optimized) {
@@ -756,12 +727,6 @@
 
     modeSwitch.addEventListener("change", (e) => {
       setAuditData(e.target.checked);
-    });
-
-    walkthroughForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      successMsg.style.display = "block";
-      walkthroughForm.reset();
     });
 
     const fadeEls = document.querySelectorAll(".fade-up");
