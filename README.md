@@ -1,33 +1,38 @@
-# Bookin-AI Portfolio (GitHub Pages Ready)
+# 🚀 Bookin-AI | The 2026 Digital Edge
 
-This is a static, production-optimized landing page.
+**Bookin-AI** is a high-performance agency specialized in bridging the "Three Digital Gaps" for local businesses: **AIOps Automation**, **Green-Tech Performance**, and **Voice SEO Optimization**.
 
-## Publish on GitHub (simple)
+This repository contains the front-end architecture and deployment configuration for our primary lead-generation engine.
 
-1. Create a new GitHub repo.
-2. Upload/push this entire folder to the repo.
-3. In GitHub: `Settings -> Pages`.
-4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-5. Push to `main` (or re-run the workflow once).  
-   The workflow in `.github/workflows/pages.yml` deploys automatically.
+---
 
-### One-command publish (local terminal)
+## 🛠 Tech Stack
+* **Framework:** Next.js 16 (App Router)
+* **Styling:** Tailwind CSS 4
+* **Deployment:** GitHub Pages / Vercel
+* **Automation:** Make.com + Google Gemini 1.5 Flash
+* **Form Handling:** Formspree (Standard Tier)
 
-```bash
-./publish-github.sh https://github.com/afilmer-ai/bookin-ai.git main
-```
+---
 
-Your live URL will be:
-- `https://<your-username>.github.io/<repo-name>/` (project page), or
-- your custom domain if you configure one.
+## 🏗 Project Structure
+* `/src/app`: Core page routing and high-converting UI components.
+* `/public`: Optimized high-fidelity assets and brand identity.
+* `.cursor/rules`: Custom AI behavioral rules (MDC) for rapid development.
 
-## Local preview
+---
 
-From this folder:
+## 🧠 Business Logic & Automation (The "Plumbing")
+This site is integrated with a $0-budget, enterprise-grade backend:
+1.  **Lead Capture:** Formspree handles raw inquiries.
+2.  **AI Analysis:** Make.com watches for new leads and triggers **Gemini 1.5 Flash**.
+3.  **Speed-to-Lead:** Leads are categorized (Gold/Silver/Bronze) and receive an automated, high-authority reply from Aaron Filmer within 15 minutes.
 
-```bash
-ruby -run -e httpd . -p 4173
-```
+---
 
-Then open `http://127.0.0.1:4173/`.
-
+## 🚦 Local Development
+1. **Clone the repo:**
+   ```bash
+   git clone [https://github.com/afilmer/bookin-ai.git](https://github.com/afilmer/bookin-ai.git)
+   npm install
+   npm run dev
