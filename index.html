@@ -422,15 +422,16 @@
     }
 
     #cta form button[type="submit"] {
-      min-height: 74px;
-      padding: 1.2rem 1.5rem;
+      min-height: 84px !important;
+      padding: 1.35rem 1.8rem !important;
       border: 1px solid transparent;
       border-radius: 12px;
-      background: var(--emerald);
-      color: #04140f;
+      background: var(--emerald) !important;
+      color: #04140f !important;
       font-weight: 700;
+      font-size: 1.05rem;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(0, 227, 154, 0.3);
+      box-shadow: 0 12px 28px rgba(0, 227, 154, 0.34) !important;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -638,7 +639,7 @@
           <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" placeholder="What can Bookin-AI optimize for you?"></textarea>
           <input type="hidden" name="_next" value="https://bookin-ai.com/thanks">
-          <button type="submit">Unlock My 10-Min Walkthrough</button>
+          <button class="btn btn-primary" type="submit">Unlock My 10-Min Walkthrough</button>
         </form>
       </div>
     </section>
