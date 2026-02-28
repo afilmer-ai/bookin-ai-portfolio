@@ -421,6 +421,24 @@
       align-content: start;
     }
 
+    #cta form button[type="submit"] {
+      min-height: 74px;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      background: var(--emerald);
+      color: #04140f;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0, 227, 154, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #cta form button[type="submit"]:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0, 227, 154, 0.38);
+    }
+
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
